@@ -1,4 +1,4 @@
-FROM golang:1.20.3-alpine as builder
+FROM golang:1.20.5-alpine as builder
 WORKDIR /go/src
 COPY . .
 RUN go build -o vault-audit .
