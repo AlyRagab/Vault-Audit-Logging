@@ -5,7 +5,7 @@ Hashicorp Vault Audit Logging when deployed in Kubernetes
 
 Running Hashicorp Vault and enable its Audit logs is not straight forward as it only supports enabling the audit logging feature in a [Local File](https://github.com/hashicorp/vault-helm/blob/main/values.yaml#L732) audit device which makes the below two problems :
 
-- Limitation that if that file is fully utilized and Vault could not write data on it, Then Vault will prevent Vault from servicing requests [Official Documentation](https://developer.hashicorp.com/vault/docs/audit)
+- Limitation that if that file is fully utilized and Vault could not write data on it, Then that will prevent Vault from servicing requests as per the [Official Documentation](https://developer.hashicorp.com/vault/docs/audit)
 
 - The need to get the data out of that local file, may be to SIEM solution or any other Observability platform like ( Datadog, Newrelic, Loki ...etc)
 
