@@ -3,7 +3,7 @@ WORKDIR /go/src
 COPY . .
 RUN go build -o vault-audit .
 
-FROM alpine:3.18.0
+FROM alpine:3.18.2
 WORKDIR /bin
 COPY --from=builder /go/src .
 USER nobody
